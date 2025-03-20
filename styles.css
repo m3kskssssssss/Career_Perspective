@@ -1,0 +1,568 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    background: white;
+    border-bottom: 1px solid #ccc;
+    z-index: 1000;
+    font-weight: bold; /* Жирный шрифт для текста вопроса */
+    font-size: 2vw;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 1rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li1 {
+    position: relative;
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+nav ul li1 a {
+    text-decoration: none;
+    color: black; /* Цвет текста для элементов навигации */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+nav ul li:hover:after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: black;
+}
+
+.logo {
+    width: 30px;
+    height: 30px;
+}
+
+.vk-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.hero {
+    background-image: url('back1.png');
+    background-size: cover; /* Настройка размера */
+    background-position: center; /* Центрирование */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+.hero h1 {
+    font-size: 500%; 
+    padding: 1rem;
+}
+
+.hero p {
+    font-size: 24px; /* Регулируйте размер шрифта */
+    padding: 1rem;
+}
+
+.register-button {
+    background-color: orange;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none
+}
+
+.register-button:hover {
+    background-color: darkorange;
+}
+
+.info {
+    background: orange;
+    padding: 3rem;
+    color: rgb(0, 0, 0);
+    border-radius: 55px;
+    position: relative; /* Относительное позиционирование */
+    z-index: 1; /* Чтобы быть выше фона */
+    top: -50px; /* Настройка положения, чтобы наслоить на .hero */
+}
+
+.info ul {
+    list-style: none; /* Убираем стандартные маркеры */
+    padding: 0; /* Убираем стандартные отступы у ul */
+}
+
+.info-item {
+    background: white; /* Белый фон */
+    font-size: 21px;
+    border-radius: 15px; /* Округленные углы */
+    padding: 1rem; /* Отступы вокруг текста */
+    margin: 0.5rem 0; /* Отступы между элементами */
+    display: flex; /* Для выравнивания текста и иконки */
+    align-items: center; /* Вертикальное центрирование иконки и текста */
+    color: black; /* Цвет текста внутри белого блока */
+}
+
+.icon {
+    width: 20px; 
+    height: 20px;
+    margin-right: 10px; 
+}
+
+h3 {
+    font-size: 58px; 
+    color: white;
+    padding: 1rem;
+}
+
+h4 {
+    font-size: 28px; 
+    color: black;
+    padding: 1rem;
+}
+
+h5 {
+    font-size: 58px; 
+    color: black;
+    padding: 1rem;
+    text-align: left;
+}
+
+.program, .video-section {
+    padding: 2rem;
+    text-align: center;
+    background-color: #ffffff; /* Цвет фона для секций */
+    margin: 2rem 0;
+    border-radius: 10px; /* Закругленные углы */
+}
+
+
+.program-list {
+    background-color: orange; /* Цвет фона для списка программы */
+    border-radius: 10px; /* Закругленные углы */
+    padding: 1rem;
+    color: white; /* Цвет текста */
+}
+
+.video-container {
+    margin: 1rem 0;
+}
+
+.video-container iframe {
+    width: 100%; /* Адаптивная ширина */
+    height: 600px; /* Регулируйте высоту */
+    border-radius: 10px; /* Закругленные углы */
+}
+
+/* Адаптивный дизайн */
+@media (max-width: 768px) {
+    .video-container iframe {
+        height: 400px; /* Регулируйте высоту на меньших экранах */
+    }
+}
+
+.program-list {
+    background-color: orange; /* Цвет фона для списка программы */
+    border-radius: 55px; /* Закругленные углы */
+    padding: 2rem;
+    color: white; /* Цвет текста */
+    list-style: none; /* Убираем стандартные точки списка */
+    list-style: none;
+    
+}
+
+.program-list ol {
+    padding-left: 10px;
+    padding-top: 10px; /* Убираем отступ */
+    
+}
+
+.program-list li {
+    position: relative; /* Для использования псевдоэлементов */
+    padding: 10px 0; /* Отступы сверху и снизу для списка */
+    font-size: 32px;
+    padding: 0.5rem;
+    color: white;
+    text-align: left;
+    list-style: none;
+    
+}
+
+
+
+.program-number {
+    font-size: 32px; /* Размер числа */
+    color: white; /* Цвет числа */
+    margin-right: 10px; /* Отступ между номером и текстом */
+    font-weight: bold; /* Жирный шрифт для номера */
+    vertical-align: top; /* Выравнивание по верхнему краю */
+    list-style: none;
+}
+
+.location {
+    padding: 2rem;
+    background-color: #ffffff; /* Цвет фона для секции */
+    margin: 2rem 0;
+    border-radius: 10px; /* Закругленные углы */
+}
+
+.map-container {
+    margin-bottom: 1rem; /* Отступ между картой и текстом */
+}
+
+.location-info {
+    display: flex;
+    align-items: center; /* Вертикальное выравнивание */
+    background-color: orange; /* Фон для текста */
+    padding: 20px; /* Отступы вокруг текста */
+    border-radius: 35px; /* Закругленные углы */
+    position: relative; /* Относительное позиционирование */
+    z-index: 1; /* Чтобы быть выше фона */
+    top: -20px; /* Настройка положения, чтобы наслоить на .hero */
+}
+
+.iconmap {
+    width: 60px; /* Размер иконки */
+    height: 70px; /* Размер иконки */
+    margin-right: 10px; /* Отступ между иконкой и текстом */
+    
+}
+
+.location-text h4 {
+    font-size: 35px; /* Размер заголовка */
+    color: white; /* Цвет заголовка */
+    margin: 0; /* Убираем отступы */
+    
+}
+
+.location-text p {
+    color: white; /* Цвет текста */
+    font-size: 25px;
+    margin: 0; /* Убираем отступы */
+    padding: 20px;
+    
+}
+
+
+.register-button-1 {
+    background-color: rgb(0, 0, 0);
+    border: none;
+    color: white;
+    padding: 20px 30px;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 26px;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    display: inline-flex; /* Используем flex для центрирования */
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Дублируем на случай старых браузеров */
+    white-space: nowrap; /* Запрещаем перенос текста */
+    padding: 20px 15px; /* Уменьшаем боковые отступы на мобильных */
+    
+}
+
+.button-container {
+    display: flex; /* Используем flexbox для контейнера кнопки */
+    justify-content: center; /* Центрируем содержимое по горизонтали */
+    margin-top: 1rem; /* Отступ сверху, чтобы отделить от предыдущих элементов */
+}
+
+.register-button-1:hover {
+    background-color: darkorange;
+}
+
+.faq {
+    margin: 2rem 0;
+    padding: 2rem;
+    
+}
+
+.faq-item {
+    margin-bottom: 15px;
+    border: 2px solid orange; /* Граница вокруг FAQ */
+    border-radius: 30px;
+    padding: 10px;
+}
+
+.faq-question {
+    display: flex; /* Используем flexbox для выравнивания */
+    justify-content: space-between; /* Раздвигаем элементы */
+    align-items: center; /* Вертикальное выравнивание */
+    font-weight: bold; /* Жирный шрифт для текста вопроса */
+    font-size: 32px;
+    padding: 0.5rem;
+}
+
+.toggle-button {
+    background-color: orange; /* Цвет кнопки */
+    color: white; /* Цвет текста */
+    border: 7px; /* Убираем границу */
+    border-radius: 50%; /* Делаем кнопку круглой */
+    width: 30px; /* Ширина кнопки */
+    height: 30px; /* Высота кнопки */
+    cursor: pointer; /* Указатель при наведении */
+    font-size: 22px;
+    min-width: 30px; /* Фиксированная минимальная ширина */
+    min-height: 30px; /* Фиксированная минимальная высота */
+    flex-shrink: 0; /* Запрещаем уменьшение */
+    
+    
+}
+
+.faq-answer {
+    display: none; /* Скрываем ответ по умолчанию */
+    padding-top: 10px; /* Отступ сверху для текста ответа */
+    font-size: 22px;
+    padding: 0.5rem;
+}
+
+.footer {
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-wrap: wrap; /* Разрешаем перенос элементов */
+    justify-content: space-between;
+    align-items: center;
+    padding: 3vw 5vw; /* Увеличиваем отступы */
+    gap: 2rem; /* Равномерные промежутки между элементами */
+    min-height: 200px; /* Минимальная высота футера */
+}
+
+.footer-logos {
+    display: flex;
+    gap: 3vw; /* Отступ между логотипами */
+    align-items: center;
+    flex: 1 1 40%; /* Гибкое распределение пространства */
+    min-width: 300px; /* Минимальная ширина блока */
+}
+
+.footer-logo {
+    max-width: 95%; /* Ограничиваем максимальную ширину логотипа */
+    height: auto; /* Автоматическая высота для сохранения пропорций */
+    margin-right: 2vw; /* Отступ между логотипами в vw */
+    flex-shrink: 0; /* Запрещаем сжатие */
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1rem;
+    flex: 1 1 40%; /* Гибкое распределение пространства */
+    min-width: 300px; /* Минимальная ширина блока */
+}
+
+.footer-links {
+    display: flex;
+    gap: 1.5vw; /* Отступ между иконками */
+    max-width: 90%; /* Ограничиваем максимальную ширину логотипа */
+    height: auto; /* Автоматическая высота для сохранения пропорций */
+    margin-right: 2vw; /* Отступ между логотипами в vw */
+}
+
+.footer-info p {
+    margin: 0;
+    font-size: clamp(12px, 1.5vw, 16px); /* Адаптивный размер текста */
+    white-space: nowrap; /* Запрещаем перенос текста */
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 5vw;
+    }
+    
+    .footer-logos {
+        justify-content: center;
+        min-width: auto;
+        flex-wrap: wrap;
+    }
+    
+    .footer-info {
+        align-items: center;
+        min-width: auto;
+    }
+    
+    .footer-logo {
+        height: 70px;
+    }
+    
+    .footer-links img {
+        width: 74px;
+        height: 74px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-logo {
+        height: 40px;
+    }
+    
+    .footer-info p {
+        white-space: normal; /* Разрешаем перенос на очень узких экранах */
+        text-align: center;
+    }
+}
+
+
+
+.nav-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.menu-item {
+    margin: 0 10px; /* Расстояние между пунктами меню */
+}
+
+/* Скрываем меню по умолчанию */
+.menu-toggle {
+    display: none; /* Скрываем кнопку по умолчанию */
+    background: transparent;
+    border: none;
+    font-size: 24px; /* Размер иконки плюса */
+    cursor: pointer;
+}
+
+.partners {
+    padding: 4rem 1rem;
+    background: white;
+}
+
+.partners h5 {
+    font-size: 58px;
+    color: black;
+    padding: 1rem;
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.partners-container {
+    overflow-x: auto;
+    cursor: grab;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 1rem;
+    scroll-snap-type: x mandatory;
+}
+
+.partners-container:active {
+    cursor: grabbing;
+}
+
+.partners-container::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background-color: #ffffff;
+}
+
+.partners-container::-webkit-scrollbar-thumb {
+    background-color: orange;
+    border-radius: 4px;
+}
+
+.partners-track {
+    display: flex;
+    gap: 1rem;
+    padding: 0 1rem;
+    user-select: none;
+    scroll-snap-align: start;
+}
+
+.partners-track img {
+    flex: 0 0 auto;
+    width: calc(33.33% - 1.33rem);
+    height: 50vh;
+    max-height: 600px;
+    min-height: 300px;
+    border-radius: 20px;
+    object-fit: cover;
+    transition: transform 0.2s;
+    scroll-snap-align: center;
+}
+
+@media (max-width: 1024px) {
+    .partners-track img {
+        width: calc(70% - 1rem);
+    }
+}
+
+@media (max-width: 768px) {
+    .partners-track {
+        gap: 1.5rem;
+        padding: 0 1.5rem;
+    }
+    
+    .partners-track img {
+        width: calc(70% - 0.1rem);
+        height: 40vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .partners-track img {
+        width: 910vw;
+        height: 60vh;
+        min-height: 300px;
+        gap: 5rem;
+        padding: 0 5rem;
+    }
+}
+
+.partners-track img {
+    aspect-ratio: 467/628; /* Соотношение оригинальных размеров 467x628 */
+    object-fit: contain; /* Показывать всё изображение без обрезки */
+}
+
+.partners, .program, .location {
+    scroll-margin-top: 30px; /* Высота вашего хедера */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@media (max-width: 768px) {
+    .vk-icon {
+        display: none !important;
+    }
+    
+
+}
